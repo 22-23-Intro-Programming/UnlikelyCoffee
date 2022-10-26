@@ -15,7 +15,11 @@ def doubleIt():
 
 def camelCase():
     file = input("Please enter filename:\n")
-    ?????????????
+    split = file.split(" ")
+    camelcase = split[0] + "".join(word.title() for word in split[1:])
+    camelcase = camelcase.replace("/", "-")
+    camelcase = camelcase.replace("_", "")
+    print(camelcase)
     
 def main():
     factorial(1)
